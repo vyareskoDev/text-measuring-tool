@@ -1,0 +1,24 @@
+.file-exporter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+}
+
+input {
+    width: 80px;
+    border: 0;
+    outline: none;
+    background-color: rgba(170, 170, 170, 0.493);
+    padding: 3px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+input:hover {
+    background-color: rgba(139, 139, 139, 0.493);
+}
+input:active {
+    background-color: rgba(201, 201, 201, 0.493);
+}

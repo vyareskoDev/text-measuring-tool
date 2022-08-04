@@ -37,10 +37,15 @@ function App() {
   return (  
       <div className="App">
         <Header />
-        <Main text={text} setText={setText} textInfo={textInfo} setShowPopup={setShowFileInputPopup} />
+        <Main text={text} setText={setText} textInfo={textInfo} setShowFileInputPopup={setShowFileInputPopup} setShowFileExportPopup={setShowFileExportPopup} />
         {showFileInputPopup &&
           <Popup headerText={"Input file"} showPopup={showFileInputPopup} onClose={setShowFileInputPopup}>
             <FileUploader onFileSelect={setFile}></FileUploader>
+          </Popup>
+        }
+        {showFileExportPopup &&
+          <Popup headerText="Input file" showPopup={showFileExportPopup} onClose={setShowFileExportPopup}>
+            <FileExporter fileText={text}/>
           </Popup>
         }
 

@@ -7,11 +7,12 @@ type MainProps = {
     text: string;
     setText: Function;
     textInfo: TextInfo;
-    setShowPopup: Function;
+    setShowFileInputPopup: Function;
+    setShowFileExportPopup: Function;
 }
 
 
-const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowPopup}) => {
+const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopup, setShowFileExportPopup}) => {
     return (
         <main>
           <div className="central-column">
@@ -24,8 +25,8 @@ const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowPopup}) => {
                 </section>
                 <section className="buttons">
                   <button className="btn clear-text-button" onClick={() => setText("")}>Clear text</button>
-                  <button className="btn upload-file-button" onClick={() => setShowPopup(true)}>Import file</button>
-                  <button className="btn">Export file</button>
+                  <button className="btn upload-file-button" onClick={() => setShowFileInputPopup(true)}>Import file</button>
+                  <button className="btn" onClick={() => setShowFileExportPopup(true)}>Export file</button>
                 </section>
               </div>
               <div className="container__body">
