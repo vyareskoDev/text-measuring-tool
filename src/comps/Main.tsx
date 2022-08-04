@@ -2,6 +2,8 @@ import React from "react";
 import TextInfo from "../interfaces/TextInfo";
 import InfoTable from "./InfoTable";
 import "../styles/Main.css";
+import Accordion from "../utilComps/Accordion/Accordion";
+
 
 type MainProps = {
     text: string;
@@ -21,7 +23,7 @@ const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopu
                 <section className="title">
                   <span>
                     Text <span className="special-gradient-text">Measuring tool</span>
-                  </span>
+                  </span>   
                 </section>
                 <section className="buttons">
                   <button className="btn clear-text-button" onClick={() => setText("")}>Clear text</button>
@@ -32,6 +34,7 @@ const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopu
               <div className="container__body">
                 <textarea autoFocus value={text} onChange={e => setText(e.target.value)} className="body__textarea"></textarea>
                 <InfoTable textInfo={textInfo} />
+                <Accordion />
               </div>
             </div>
           </div>

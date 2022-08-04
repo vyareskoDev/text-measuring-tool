@@ -34,28 +34,7 @@ export default function measureText(text: string)
             const indexOfChar = word.indexOf(char);
             if(char === "." || char === "!" || char === "?")
             {
-                if(char === ".")
-                {
-                    if((word[indexOfChar + 1] === "." && word[indexOfChar + 2] === ".") || word[indexOfChar + 1] === ".")
-                    {
-                        textInfo.sentencesCount++;
-                    }
-                    else if(word.at(-1) === char)
-                    {
-                        textInfo.sentencesCount++;
-                    }
-                }
-                else if(char === "!")
-                {
-                    if(word[indexOfChar + 1] === "?")
-                    {
-                        textInfo.sentencesCount++;
-                    }
-                    else if(word.at(-1) === char)
-                    {
-                        textInfo.sentencesCount++;
-                    }
-                }
+                textInfo.sentencesCount++;
             }
         }
     }

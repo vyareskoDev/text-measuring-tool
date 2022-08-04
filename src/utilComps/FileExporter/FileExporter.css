@@ -6,7 +6,7 @@
     gap: 50px;
 }
 
-input {
+.file-exporter input {
     width: 80px;
     border: 0;
     outline: none;
@@ -16,9 +16,9 @@ input {
     margin-left: 15px;
 }
 
-input:hover {
+.file-exporter input:hover {
     background-color: rgba(139, 139, 139, 0.493);
 }
-input:active {
+.file-exporter input:active {
     background-color: rgba(201, 201, 201, 0.493);
 }

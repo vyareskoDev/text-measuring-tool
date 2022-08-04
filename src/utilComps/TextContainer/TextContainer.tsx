@@ -13,4 +13,4 @@ const TextContainer:FC<Props> = ({children}) => {
     )
 }
 
-export default Text;
+export default TextContainer;
