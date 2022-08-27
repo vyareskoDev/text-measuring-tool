@@ -42,16 +42,17 @@
     
 }
 
+
 .btn {
-    font-family: 'Open Sans', sans-serif;
-    font-size: .95rem;
-    font-weight: 500;
-    background-color: var(--main-button-color);
+    font-size: 1em;
+    border-radius: .2rem;
+    float: right;
+    background-color: rgba(85, 85, 85, 0.384);
     border: none;
-    border-radius: .3rem;
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
 }
+
 
 .btn:hover {
     cursor: pointer;
