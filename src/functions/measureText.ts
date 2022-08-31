@@ -15,6 +15,9 @@ export default function measureText(text: string)
         theMostPopularWord: "None",
         theMostPopularWordCount: 0
     }
+
+    textInfo.sentencesCount = 0;
+
     if(text.length === 0) return textInfo;
     const normalisedTextArray = text.trim().toLowerCase().split(" ");
     normalisedTextArray.forEach(elem => elem.trim());
@@ -29,15 +32,17 @@ export default function measureText(text: string)
             textInfo.theMostPopularWord = word;
             textInfo.theMostPopularWordCount = wordCount;
         }
-        for(let char of word) 
+        for(let i = 0; i < word.length; i++)
         {
-            const indexOfChar = word.indexOf(char);
-            if(char === "." || char === "!" || char === "?")
+            if((word.at(i) === "!" || word.at(i) === "?" || word.at(i) === ".") && i === word.length - 1)
             {
                 textInfo.sentencesCount++;
             }
         }
+
     }
+
+
     textInfo.averageReadingTime = Math.round((textInfo.wordsCount * 60) / AVERAGE_READING_SPEED);
     textInfo.averageSpeakingTime = Math.round((textInfo.wordsCount * 60) / AVERAGE_SPEAKING_SPEED);
     return textInfo;
