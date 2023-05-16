@@ -1,6 +1,5 @@
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect} from "react";
 import "./App.css";
-import Header from "./comps/Header";
 import measureText from "./functions/measureText";
 import TextInfo from "./interfaces/TextInfo";
 import FileUploader from "./utilComps/FileUploader/FileUploader";
@@ -36,7 +35,6 @@ function App() {
 
   return (  
       <div className="App">
-        <Header />
         <Main text={text} setText={setText} textInfo={textInfo} setShowFileInputPopup={setShowFileInputPopup} setShowFileExportPopup={setShowFileExportPopup} />
         {showFileInputPopup &&
           <Popup headerText={"Input file"} showPopup={showFileInputPopup} onClose={setShowFileInputPopup}>

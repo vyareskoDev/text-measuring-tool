@@ -11,16 +11,6 @@ const InfoTable:React.FC<IntoTableProps> = ({textInfo}) => {
     return (
         <div className="table-container">
                   <table className="info-table">
-                    <thead>
-                      <tr>
-                        <th>
-                          Key
-                        </th>
-                        <th>
-                          Value
-                        </th>
-                      </tr>
-                    </thead>
                     <tbody>
                       <tr>
                         <td>Words count</td>

@@ -25,16 +25,15 @@ const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopu
                     Text <span className="special-gradient-text">Measuring tool</span>
                   </span>   
                 </section>
+              </div>
+              <div className="container__body">
+                <textarea autoFocus value={text} onChange={e => setText(e.target.value)} className="body__textarea"></textarea>
                 <section className="buttons">
                   <button className="btn clear-text-button" onClick={() => setText("")}>Clear text</button>
                   <button className="btn upload-file-button" onClick={() => setShowFileInputPopup(true)}>Import file</button>
                   <button className="btn" onClick={() => setShowFileExportPopup(true)}>Export file</button>
                 </section>
-              </div>
-              <div className="container__body">
-                <textarea autoFocus value={text} onChange={e => setText(e.target.value)} className="body__textarea"></textarea>
                 <InfoTable textInfo={textInfo} />
-                <Accordion />
               </div>
             </div>
           </div>
