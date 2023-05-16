@@ -17,7 +17,6 @@ type MainProps = {
 const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopup, setShowFileExportPopup}) => {
     return (
         <main>
-          <div className="central-column">
             <div className="container">
               <div className="container__header">
                 <section className="title">
@@ -36,7 +35,6 @@ const Main:React.FC<MainProps> = ({text, setText, textInfo, setShowFileInputPopu
                 <InfoTable textInfo={textInfo} />
               </div>
             </div>
-          </div>
         </main>
     )
 }
